@@ -839,6 +839,7 @@ body {
     <ul class="footer-links">
       <li><a href="#" onclick="openModal('privacy-modal');return false;">Privacy Policy</a></li>
       <li><a href="#" onclick="openModal('terms-modal');return false;">Terms of Service</a></li>
+      <li><a href="#" onclick="openModal('support-modal');return false;">Support</a></li>
       <li><a href="mailto:contact@nexgenspec.com">Contact</a></li>
     </ul>
     <div class="footer-copy">&copy; 2026 NexGenSpec. All rights reserved.</div>
@@ -1137,18 +1138,16 @@ document.querySelectorAll('.legal-modal-overlay').forEach(el => {
       <p>You must create an account to use the app. You are responsible for maintaining the confidentiality of your login credentials. You agree to notify us immediately of any unauthorized use of your account.</p>
 
       <h4>3. Subscriptions and Payments</h4>
-      <p>NexGenSpec offers optional Pro subscriptions:</p>
+      <p>NexGenSpec offers an optional Pro subscription:</p>
       <ul>
-        <li>Free Trial &mdash; 3 inspections with full access to all features, no credit card required</li>
-        <li>Standard Monthly: $28.99/month &mdash; Unlimited inspections, clean PDFs, voice, LiDAR, annotations</li>
-        <li>Standard Annual: $289.99/year &mdash; Same as Standard Monthly, billed annually</li>
-        <li>Pro Monthly: $78.99/month &mdash; Everything in Standard + team collaboration, shared templates, admin dashboard, priority support</li>
-        <li>Pro Annual: $789.99/year &mdash; Same as Pro Monthly, billed annually</li>
+        <li>Free &mdash; 3 inspections with full access to all features, no credit card required</li>
+        <li>Pro Monthly: $28.99/month &mdash; Unlimited inspections, clean branded PDFs, voice commands, LiDAR scanning, annotation pack, invoicing &amp; client delivery</li>
+        <li>Pro Annual: $289.99/year &mdash; Same as Pro Monthly, billed annually (~17% savings)</li>
       </ul>
       <p>Subscriptions are billed through your Apple ID account. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions in your device's App Store account settings. Any unused portion of a free trial, if offered, is forfeited when you purchase a subscription.</p>
 
       <h4>4. Free and Pro Features</h4>
-      <p>Free users can create inspections and generate watermarked PDF reports. Pro subscribers unlock full PDF reports without watermarks, voice commands, and additional features as described in the app.</p>
+      <p>Free users can create up to 3 inspections with full access to all features. Pro subscribers unlock unlimited inspections, clean branded PDF reports, voice commands, LiDAR scanning, the annotation pack, and invoicing as described in the app.</p>
 
       <h4>5. Intellectual Property</h4>
       <p>The app, its design, code, branding, and content are owned by NexGenSpec. You retain ownership of all inspection data, photos, and reports you create.</p>
@@ -1173,6 +1172,41 @@ document.querySelectorAll('.legal-modal-overlay').forEach(el => {
 
       <h4>Contact Us</h4>
       <p>If you have questions about these terms, contact us at: <a href="mailto:contact@nexgenspec.com">contact@nexgenspec.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- SUPPORT MODAL -->
+<div class="legal-modal-overlay" id="support-modal">
+  <div class="legal-modal">
+    <div class="legal-modal-header">
+      <h2>Support</h2>
+      <button class="legal-modal-close" onclick="closeModal('support-modal')">&times;</button>
+    </div>
+    <div class="legal-modal-body">
+      <h4>Need Help?</h4>
+      <p>We're here to help you get the most out of NexGenSpec. If you're experiencing issues or have questions, reach out and we'll get back to you as quickly as possible.</p>
+
+      <h4>Contact Support</h4>
+      <p>Email us at: <a href="mailto:contact@nexgenspec.com">contact@nexgenspec.com</a></p>
+      <p>Please include as much detail as possible, including your device model, iOS version, and a description of the issue.</p>
+
+      <h4>Common Questions</h4>
+
+      <h4>How do I manage or cancel my subscription?</h4>
+      <p>Open your device's Settings &gt; Apple ID &gt; Subscriptions. You can change or cancel your NexGenSpec subscription there. Cancellations take effect at the end of the current billing period.</p>
+
+      <h4>How do I delete my account?</h4>
+      <p>In the app, go to Settings &gt; Delete Account. This permanently removes all your data and cannot be undone.</p>
+
+      <h4>Which devices support LiDAR scanning?</h4>
+      <p>LiDAR scanning requires an iPhone Pro or iPad Pro with a LiDAR sensor (iPhone 12 Pro and later, iPad Pro 2020 and later).</p>
+
+      <h4>How do I restore my subscription on a new device?</h4>
+      <p>Sign in with the same Apple ID you used to purchase your subscription. Your Pro access will be restored automatically. If not, use the "Restore Purchases" option on the upgrade screen.</p>
+
+      <h4>Is my data backed up?</h4>
+      <p>Inspection data is stored locally on your device and included in your standard iCloud/iTunes backups. We do not upload your inspection data to external servers.</p>
     </div>
   </div>
 </div>
