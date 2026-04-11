@@ -207,7 +207,7 @@ body {
 .hero p {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--gray-400); max-width: 580px;
-  margin: 0 auto 40px; line-height: 1.7;
+  margin: 0 auto 32px; line-height: 1.7;
 }
 
 .hero-cta {
@@ -716,7 +716,107 @@ body {
   line-height: 1.5;
 }
 @media (max-width: 700px) {
+  .proof-grid { grid-template-columns: repeat(2, 1fr); max-width: 420px; }
+}
+@media (max-width: 480px) {
   .proof-grid { grid-template-columns: 1fr; max-width: 360px; }
+}
+
+/* ── HERO BUTTONS ── */
+.hero-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 32px;
+  color: var(--gray-400);
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: color var(--transition), border-color var(--transition), transform var(--transition);
+}
+.hero-cta-secondary:hover {
+  color: var(--white);
+  border-color: var(--gray-400);
+  transform: translateY(-2px);
+}
+
+/* ── STEP ICONS ── */
+.step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(31,110,245,0.1), rgba(38,209,238,0.08));
+  margin: 0 auto 16px;
+}
+
+/* ── WAITLIST FORM ── */
+.waitlist-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.waitlist-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition), background var(--transition);
+}
+.waitlist-input::placeholder { color: var(--gray-500); }
+.waitlist-input:focus {
+  border-color: var(--cyan);
+  background: rgba(255,255,255,0.12);
+}
+.waitlist-btn {
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: none;
+  background: var(--gradient-blue-cyan);
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 24px rgba(31,110,245,0.35);
+  white-space: nowrap;
+}
+.waitlist-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(31,110,245,0.45);
+}
+.waitlist-note {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ── 4-COL PROOF GRID ── */
+.proof-grid {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 960px;
 }
 </style>
 </head>
@@ -751,23 +851,20 @@ body {
   <div class="hero-content">
     <div class="hero-badge reveal">
       <span class="hero-badge-dot"></span>
-      Coming Soon to the App Store
+      Join the Waitlist &mdash; Launching Soon
     </div>
     <img src="logo.jpg" alt="NexGenSpec" class="hero-logo-top reveal" style="width:80px;height:80px;border-radius:18px;margin-bottom:24px;filter:drop-shadow(0 8px 24px rgba(31,110,245,0.3));">
     <h1 class="reveal reveal-delay-1">Built by an Inspector.<br>Built for Inspectors.</h1>
     <p class="hero-tagline reveal reveal-delay-1">Every System. Every Structure. We Do It All.</p>
     <p class="reveal reveal-delay-2">Capture evidence-grade photos, generate branded PDF reports, and run your entire inspection workflow from your iPhone or iPad. Designed by a working inspector in the Denver Metro area.</p>
-    <a href="#cta" class="hero-cta reveal reveal-delay-3">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.5 10.5c0-.17-.07-.34-.2-.46l-4-3.5a.65.65 0 00-.86.06.65.65 0 00.06.86L12.74 10H5.5a.62.62 0 00-.63.63c0 .34.28.62.63.62h7.24L9.5 14.04a.65.65 0 00-.06.86c.23.26.63.28.86.06l4-3.5c.13-.12.2-.3.2-.46z" fill="#fff"/></svg>
-      Learn More
-    </a>
-    <p class="hero-credibility reveal reveal-delay-3">Built by a licensed home inspector. Based in Commerce City, CO. Serving the Denver Metro area.</p>
-    <div class="hero-mockup reveal reveal-delay-4">
-      <div class="hero-mockup-frame">
-        <img src="icon.png" alt="NexGenSpec" style="width:48px;height:48px;border-radius:12px;margin-bottom:12px;opacity:0.7;">
-        <span class="hero-mockup-caption">iPad screenshots coming soon</span>
-      </div>
+    <div class="hero-buttons reveal reveal-delay-3">
+      <a href="#cta" class="hero-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get Early Access
+      </a>
+      <a href="#features" class="hero-cta-secondary">Learn More</a>
     </div>
+    <p class="hero-credibility reveal reveal-delay-3">Built by a licensed home inspector. Based in Commerce City, CO. Serving the Denver Metro area.</p>
   </div>
 </section>
 
@@ -848,17 +945,26 @@ body {
       <div class="step reveal">
         <div class="step-number">1</div>
         <div class="step-connector"></div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+        </div>
         <h3>Inspect</h3>
         <p>Walk the property, capture photos, notes, and defects organized by room. Templates keep you on track.</p>
       </div>
       <div class="step reveal reveal-delay-1">
         <div class="step-number">2</div>
         <div class="step-connector"></div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
         <h3>Generate</h3>
         <p>One tap creates a PDF report with your company logo &mdash; all findings, photos, and annotations included automatically.</p>
       </div>
       <div class="step reveal reveal-delay-2">
         <div class="step-number">3</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
         <h3>Send</h3>
         <p>Email the report and invoice directly to your client. Professional delivery in seconds, not hours.</p>
       </div>
@@ -885,6 +991,10 @@ body {
       <div class="proof-tile reveal reveal-delay-2">
         <div class="proof-value">0</div>
         <div class="proof-label">Hidden fees or surprise charges</div>
+      </div>
+      <div class="proof-tile reveal reveal-delay-3">
+        <div class="proof-value">2+ hrs</div>
+        <div class="proof-label">Saved per inspection</div>
       </div>
     </div>
   </div>
@@ -957,13 +1067,14 @@ body {
 <section class="cta-section" id="cta">
   <canvas class="cta-canvas" id="cta-canvas"></canvas>
   <div class="cta-content">
-    <div class="section-label reveal">Coming Soon</div>
-    <h2 class="section-title reveal reveal-delay-1" style="color:var(--white)">Coming Soon to the App Store.</h2>
-    <p class="section-subtitle reveal reveal-delay-2">NexGenSpec is in active development. Be the first to know when we launch.</p>
-    <a href="mailto:contact@nexgenspec.com" class="hero-cta reveal reveal-delay-3">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      Get in Touch
-    </a>
+    <div class="section-label reveal">Early Access</div>
+    <h2 class="section-title reveal reveal-delay-1" style="color:var(--white)">Be the First to Inspect Smarter.</h2>
+    <p class="section-subtitle reveal reveal-delay-2">NexGenSpec is launching soon. Drop your email and we'll notify you the moment it hits the App Store.</p>
+    <form class="waitlist-form reveal reveal-delay-3" action="https://formspree.io/f/contact@nexgenspec.com" method="POST" onsubmit="return handleWaitlist(event);">
+      <input type="email" name="email" class="waitlist-input" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit" class="waitlist-btn">Join Waitlist</button>
+    </form>
+    <p class="waitlist-note reveal reveal-delay-3">No spam, ever. Just a one-time launch notification.</p>
   </div>
 </section>
 
@@ -1004,17 +1115,41 @@ function closeMobile() {
   mobileMenu.classList.remove('open');
 }
 
-// Reveal on scroll
+// Reveal on scroll — with fallback for elements already in viewport
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+
+// Fallback: immediately reveal anything already in viewport on load
+function revealIfVisible(el) {
+  var rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight + 40 && rect.bottom > 0) {
+    el.classList.add('visible');
+    return true;
+  }
+  return false;
+}
+
+// Run fallback on load for all reveal elements
+reveals.forEach(function(el) { revealIfVisible(el); });
+
+// Observer for elements that scroll into view later
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-reveals.forEach(el => observer.observe(el));
+}, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+reveals.forEach(function(el) {
+  if (!el.classList.contains('visible')) observer.observe(el);
+});
+
+// Safety net: after 2s, force-reveal anything still hidden
+setTimeout(function() {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+    el.classList.add('visible');
+  });
+}, 2000);
 
 // Legal modals
 function openModal(id) {
@@ -1030,6 +1165,23 @@ document.querySelectorAll('.legal-modal-overlay').forEach(el => {
     if (e.target === el) closeModal(el.id);
   });
 });
+
+// Waitlist form handler (mailto fallback)
+function handleWaitlist(e) {
+  e.preventDefault();
+  var email = e.target.querySelector('input[name="email"]').value;
+  var btn = e.target.querySelector('.waitlist-btn');
+  // Open mailto as fallback
+  window.location.href = 'mailto:contact@nexgenspec.com?subject=NexGenSpec%20Waitlist&body=Please%20add%20me%20to%20the%20NexGenSpec%20waitlist.%0A%0AEmail%3A%20' + encodeURIComponent(email);
+  // Show confirmation
+  btn.textContent = 'Request Sent!';
+  btn.style.background = '#10b981';
+  setTimeout(function() {
+    btn.textContent = 'Join Waitlist';
+    btn.style.background = '';
+  }, 3000);
+  return false;
+}
 
 // Auto-open modal from URL path or hash (e.g. /privacy, /terms, #privacy-modal)
 (function() {
