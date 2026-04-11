@@ -1180,13 +1180,14 @@ function handleWaitlist(e) {
 }
 
 // Auto-open modal from URL path or hash (e.g. /privacy, /terms, #privacy-modal)
-(function() {
+// Wrapped in DOMContentLoaded so modal elements exist before we query them
+document.addEventListener('DOMContentLoaded', function() {
   var path = window.location.pathname.replace(/^\//, '').replace(/\.html$/, '');
   var hash = window.location.hash.replace('#', '');
   var map = { 'privacy': 'privacy-modal', 'terms': 'terms-modal', 'support': 'support-modal' };
   var modalId = map[path] || map[hash] || (hash && document.getElementById(hash) ? hash : null);
   if (modalId) openModal(modalId);
-})();
+});
 
 // ── Particle Network ──
 (function() {
