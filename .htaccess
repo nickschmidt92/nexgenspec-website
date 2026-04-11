@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Serve index.html for /privacy, /terms, /support so the SPA modal auto-opens
+RewriteRule ^(privacy|terms|support)/?$ /index.html [L,QSA]
