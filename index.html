@@ -156,7 +156,6 @@ section[id] { scroll-margin-top: 80px; }
   background: var(--navy);
   padding: 160px 24px 120px;
   text-align: center;
-  overflow: hidden;
 }
 .hero-canvas {
   position: absolute; inset: 0; z-index: 0;
@@ -858,19 +857,17 @@ section[id] { scroll-margin-top: 80px; }
       <span class="hero-badge-dot"></span>
       Launching Soon &mdash; Join the Waitlist
     </div>
-    <h1 class="reveal reveal-delay-1">Built by an Inspector.<br>Built for Inspectors.</h1>
+    <h1 class="reveal reveal-delay-1">Built by Inspectors.<br>For Inspectors.</h1>
     <p class="reveal reveal-delay-2">The professional home inspection app for iPhone &amp; iPad. Capture evidence-grade photos, generate PDF reports with your logo, and deliver to clients in one tap &mdash; designed by a licensed inspector in the Denver Metro area.</p>
     <div class="hero-buttons reveal reveal-delay-3">
       <a href="#cta" class="hero-cta">Get Early Access</a>
-      <a href="#features" class="hero-cta-secondary">See Features</a>
     </div>
   </div>
+  <!-- WAVE: Hero → Features (inside hero to eliminate gap) -->
+  <div class="wave-divider wave-bottom" style="background:transparent; position:absolute; bottom:-1px; left:0; right:0; z-index:2; margin:0;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--gray-50)"/></svg>
+  </div>
 </section>
-
-<!-- WAVE: Hero → Features -->
-<div class="wave-divider wave-bottom" style="background:var(--navy);">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--gray-50)"/></svg>
-</div>
 
 <!-- FEATURES -->
 <section class="section section-light" id="features" style="padding-top:60px;">
