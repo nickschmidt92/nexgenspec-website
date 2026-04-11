@@ -718,9 +718,6 @@ body {
 @media (max-width: 700px) {
   .proof-grid { grid-template-columns: repeat(2, 1fr); max-width: 420px; }
 }
-@media (max-width: 480px) {
-  .proof-grid { grid-template-columns: 1fr; max-width: 360px; }
-}
 
 /* ── HERO BUTTONS ── */
 .hero-buttons {
@@ -813,10 +810,15 @@ body {
   text-align: center;
 }
 
-/* ── 4-COL PROOF GRID ── */
-.proof-grid {
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 960px;
+/* ── 4-COL PROOF GRID (desktop override) ── */
+@media (min-width: 701px) {
+  .proof-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+  }
+}
+.proof-value {
+  white-space: nowrap;
 }
 </style>
 </head>
@@ -934,7 +936,7 @@ body {
 </div>
 
 <!-- HOW IT WORKS -->
-<section class="section" id="how-it-works" style="padding-top:60px;">
+<section class="section" id="how-it-works" style="padding-top:60px;padding-bottom:40px;">
   <div class="container">
     <div class="section-header">
       <div class="section-label reveal">How It Works</div>
@@ -973,7 +975,7 @@ body {
 </section>
 
 <!-- SOCIAL PROOF -->
-<section class="section" style="padding-top:60px;padding-bottom:60px;">
+<section class="section" style="padding-top:40px;padding-bottom:40px;">
   <div class="container">
     <div class="section-header">
       <div class="section-label reveal">Why NexGenSpec</div>
