@@ -1179,15 +1179,7 @@ function handleWaitlist(e) {
   return false;
 }
 
-// Auto-open modal from URL path or hash (e.g. /privacy, /terms, #privacy-modal)
-// Wrapped in DOMContentLoaded so modal elements exist before we query them
-document.addEventListener('DOMContentLoaded', function() {
-  var path = window.location.pathname.replace(/^\//, '').replace(/\.html$/, '');
-  var hash = window.location.hash.replace('#', '');
-  var map = { 'privacy': 'privacy-modal', 'terms': 'terms-modal', 'support': 'support-modal' };
-  var modalId = map[path] || map[hash] || (hash && document.getElementById(hash) ? hash : null);
-  if (modalId) openModal(modalId);
-});
+// Auto-open logic moved to a <script> tag AFTER the modal HTML (bottom of page)
 
 // ── Particle Network ──
 (function() {
@@ -1626,5 +1618,21 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
+<!-- Auto-open modal from URL path — MUST be after modal HTML -->
+<script>
+(function() {
+  var path = window.location.pathname.replace(/^\//, '').replace(/\.html$/, '').replace(/\/$/, '');
+  var hash = window.location.hash.replace('#', '');
+  var map = { 'privacy': 'privacy-modal', 'terms': 'terms-modal', 'support': 'support-modal' };
+  var target = map[path] || map[hash];
+  if (target) {
+    var el = document.getElementById(target);
+    if (el) {
+      el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+})();
+</script>
 </body>
 </html>
