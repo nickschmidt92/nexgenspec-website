@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexGenSpec &mdash; The Future of Home Inspections</title>
-<meta name="description" content="NexGenSpec is a professional iOS home inspection app. Capture evidence-grade media, generate PDF reports with your company logo, and streamline your workflow.">
-<meta property="og:title" content="NexGenSpec — The Future of Home Inspections">
-<meta property="og:description" content="Professional iOS home inspection app. Capture evidence-grade media, generate PDF reports with your company logo, and streamline your workflow.">
+<title>NexGenSpec &mdash; Professional Home Inspection App for iPhone &amp; iPad</title>
+<meta name="description" content="NexGenSpec is a professional home inspection app for iPhone and iPad. Capture photos, generate branded PDF reports, and deliver to clients in one tap. Built by a licensed inspector.">
+<meta property="og:title" content="NexGenSpec — Professional Home Inspection App">
+<meta property="og:description" content="Built by a licensed inspector. Capture evidence-grade photos, generate PDF reports, and deliver to clients from your iPhone or iPad.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.nexgenspec.com">
-<meta property="og:image" content="https://www.nexgenspec.com/icon.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NexGenSpec — The Future of Home Inspections">
-<meta name="twitter:description" content="Professional iOS home inspection app with PDF reports, voice commands, LiDAR scanning, and more.">
+<meta property="og:image" content="https://nexgenspec.com/logo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NexGenSpec — Professional Home Inspection App">
+<meta name="twitter:description" content="Built by a licensed inspector. Capture evidence-grade photos, generate PDF reports, and deliver to clients from your iPhone or iPad.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='32' y2='32'%3E%3Cstop offset='0%25' stop-color='%231F6EF5'/%3E%3Cstop offset='100%25' stop-color='%2326D1EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5' fill='url(%23g)'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif' font-weight='800' font-size='18'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -620,6 +620,104 @@ body {
 .legal-modal-body ul { margin: 0 0 12px 20px; }
 .legal-modal-body li { margin-bottom: 6px; }
 .legal-modal-date { font-size: 0.8rem; color: var(--gray-400); margin-bottom: 16px; }
+
+/* ── GET EARLY ACCESS NAV BUTTON ── */
+.btn-early-access {
+  display: inline-block;
+  background: var(--blue) !important;
+  color: var(--white) !important;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-early-access:hover {
+  background: #2d5ed9 !important;
+  transform: translateY(-1px);
+}
+
+/* ── HERO TAGLINE ── */
+.hero-tagline {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--cyan);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+/* ── HERO CREDIBILITY ── */
+.hero-credibility {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin-top: 20px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* ── HERO MOCKUP ── */
+.hero-mockup {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+.hero-mockup-frame {
+  max-width: 800px;
+  width: 90%;
+  background: #111318;
+  border: 1px solid #2A2A2A;
+  border-radius: 20px;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+.hero-mockup-caption {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .hero-mockup-frame { padding: 36px 16px; min-height: 160px; }
+}
+
+/* ── SOCIAL PROOF ── */
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.proof-tile {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 32px 20px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.proof-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+.proof-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.proof-label {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .proof-grid { grid-template-columns: 1fr; max-width: 360px; }
+}
 </style>
 </head>
 <body>
@@ -632,6 +730,7 @@ body {
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#cta" class="btn-early-access">Get Early Access</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -643,7 +742,7 @@ body {
   <a href="#features" onclick="closeMobile()">Features</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
   <a href="#pricing" onclick="closeMobile()">Pricing</a>
-  <a href="#cta" onclick="closeMobile()">Coming Soon</a>
+  <a href="#cta" class="btn-early-access" onclick="closeMobile()">Get Early Access</a>
 </div>
 
 <!-- HERO -->
@@ -654,14 +753,20 @@ body {
       <span class="hero-badge-dot"></span>
       Coming Soon to the App Store
     </div>
-    <h1 class="reveal reveal-delay-1">The Future of<br>Home Inspections.</h1>
-    <p class="reveal reveal-delay-2">Capture evidence-grade photos, generate PDF reports with your company logo, and streamline your entire inspection workflow &mdash; all from your iPhone or iPad.</p>
+    <img src="logo.jpg" alt="NexGenSpec" class="hero-logo-top reveal" style="width:80px;height:80px;border-radius:18px;margin-bottom:24px;filter:drop-shadow(0 8px 24px rgba(31,110,245,0.3));">
+    <h1 class="reveal reveal-delay-1">Built by an Inspector.<br>Built for Inspectors.</h1>
+    <p class="hero-tagline reveal reveal-delay-1">Every System. Every Structure. We Do It All.</p>
+    <p class="reveal reveal-delay-2">Capture evidence-grade photos, generate branded PDF reports, and run your entire inspection workflow from your iPhone or iPad. Designed by a working inspector in the Denver Metro area.</p>
     <a href="#cta" class="hero-cta reveal reveal-delay-3">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.5 10.5c0-.17-.07-.34-.2-.46l-4-3.5a.65.65 0 00-.86.06.65.65 0 00.06.86L12.74 10H5.5a.62.62 0 00-.63.63c0 .34.28.62.63.62h7.24L9.5 14.04a.65.65 0 00-.06.86c.23.26.63.28.86.06l4-3.5c.13-.12.2-.3.2-.46z" fill="#fff"/></svg>
       Learn More
     </a>
-    <div class="hero-logo-container reveal reveal-delay-4">
-      <img src="logo.jpg" alt="NexGenSpec" class="hero-logo-img">
+    <p class="hero-credibility reveal reveal-delay-3">Built by a licensed home inspector. Based in Commerce City, CO. Serving the Denver Metro area.</p>
+    <div class="hero-mockup reveal reveal-delay-4">
+      <div class="hero-mockup-frame">
+        <img src="icon.png" alt="NexGenSpec" style="width:48px;height:48px;border-radius:12px;margin-bottom:12px;opacity:0.7;">
+        <span class="hero-mockup-caption">iPad screenshots coming soon</span>
+      </div>
     </div>
   </div>
 </section>
@@ -756,6 +861,30 @@ body {
         <div class="step-number">3</div>
         <h3>Send</h3>
         <p>Email the report and invoice directly to your client. Professional delivery in seconds, not hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="section" style="padding-top:60px;padding-bottom:60px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label reveal">Why NexGenSpec</div>
+      <h2 class="section-title reveal reveal-delay-1">Why Inspectors Choose NexGenSpec</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-tile reveal">
+        <div class="proof-value">3</div>
+        <div class="proof-label">Free inspections to start</div>
+      </div>
+      <div class="proof-tile reveal reveal-delay-1">
+        <div class="proof-value">1 tap</div>
+        <div class="proof-label">From inspection to PDF report</div>
+      </div>
+      <div class="proof-tile reveal reveal-delay-2">
+        <div class="proof-value">0</div>
+        <div class="proof-label">Hidden fees or surprise charges</div>
       </div>
     </div>
   </div>
@@ -1197,7 +1326,7 @@ document.querySelectorAll('.legal-modal-overlay').forEach(el => {
 <div class="legal-modal-overlay" id="support-modal">
   <div class="legal-modal">
     <div class="legal-modal-header">
-      <h2>Support</h2>
+      <h3>Support</h3>
       <button class="legal-modal-close" onclick="closeModal('support-modal')">&times;</button>
     </div>
     <div class="legal-modal-body">
