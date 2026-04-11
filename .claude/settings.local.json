@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/nicholasschmidt/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/6ce5b728-8966-4cb4-b069-5b2f5a06d162/6565f956-fbb3-4a82-9741-9904d9ba93d5/skills/docx/**)",
+      "Bash(python3 scripts/office/unpack.py \"/Users/nicholasschmidt/Desktop/NexGenSpec__CommentLibrary__2026-04-06__v1.docx\" /tmp/nexgen_lib/)",
+      "Bash(python3 scripts/office/unpack.py \"/Users/nicholasschmidt/Desktop/NexGenSpec__ProductExecutionPlan__2026-04-06__v1.docx\" /tmp/nexgen_plan/)",
+      "Bash(mkdir -p /tmp/nexgen_lib /tmp/nexgen_plan)",
+      "Bash(unzip -o -q \"/Users/nicholasschmidt/Desktop/NexGenSpec__CommentLibrary__2026-04-06__v1.docx\" -d /tmp/nexgen_lib/)",
+      "Bash(unzip -o -q \"/Users/nicholasschmidt/Desktop/NexGenSpec__ProductExecutionPlan__2026-04-06__v1.docx\" -d /tmp/nexgen_plan/)",
+      "Bash(python3 -c ':*)",
+      "Bash(gh auth:*)",
+      "Bash(mkdir -p ~/Desktop/NexGenSpec_Backups)",
+      "Bash(cp \"/Users/nicholasschmidt/Desktop/NexGenSpec_FINAL-main.zip\" ~/Desktop/NexGenSpec_Backups/NexGenSpec_FINAL-main.ORIGINAL-BACKUP.zip)",
+      "Bash(mkdir -p /tmp/nexgen_repo)",
+      "Bash(unzip -o -q \"/Users/nicholasschmidt/Desktop/NexGenSpec_FINAL-main.zip\" -d /tmp/nexgen_repo/)",
+      "Read(//tmp/**)"
+    ]
+  }
+}
