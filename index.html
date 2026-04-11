@@ -823,6 +823,39 @@ section[id] { scroll-margin-top: 80px; }
 .proof-value {
   white-space: nowrap;
 }
+
+/* Replace with real app screenshots */
+.device-frame {
+  background: #111318;
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  max-width: 700px;
+  margin: 48px auto 0;
+}
+.device-screen {
+  background: #0D1117;
+  border-radius: 12px;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-height: 200px;
+  justify-content: center;
+}
+.mockup-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  opacity: 0.6;
+}
+.mockup-placeholder {
+  font-size: 13px;
+  color: rgba(255,255,255,0.25);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
 </style>
 </head>
 <body>
@@ -862,6 +895,14 @@ section[id] { scroll-margin-top: 80px; }
     <p class="reveal reveal-delay-2">The professional home inspection app for iPhone &amp; iPad. Capture evidence-grade photos, generate PDF reports with your logo, and deliver to clients in one tap &mdash; designed by a licensed inspector in the Denver Metro area.</p>
     <div class="hero-buttons reveal reveal-delay-3">
       <a href="#cta" class="hero-cta">Get Early Access</a>
+    </div>
+    <div class="hero-mockup reveal reveal-delay-3">
+      <div class="device-frame">
+        <div class="device-screen">
+          <img src="icon-hex.png" alt="NexGenSpec" class="mockup-logo">
+          <p class="mockup-placeholder">App screenshots coming soon</p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- WAVE: Hero → Features (inside hero to eliminate gap) -->
@@ -990,8 +1031,8 @@ section[id] { scroll-margin-top: 80px; }
         <div class="proof-label">Hidden fees or surprise charges</div>
       </div>
       <div class="proof-tile reveal reveal-delay-3">
-        <div class="proof-value">2+ hrs</div>
-        <div class="proof-label">Saved per inspection</div>
+        <div class="proof-value">1 min</div>
+        <div class="proof-label">Average report delivery time</div>
       </div>
     </div>
   </div>
@@ -1065,10 +1106,12 @@ section[id] { scroll-margin-top: 80px; }
   <canvas class="cta-canvas" id="cta-canvas" role="img" aria-label="Animated particle network background"></canvas>
   <div class="cta-content">
     <div class="section-label reveal">Early Access</div>
-    <h2 class="section-title reveal reveal-delay-1" style="color:var(--white)">Be the First to Inspect Smarter.</h2>
-    <p class="section-subtitle reveal reveal-delay-2">NexGenSpec is launching soon. Drop your email and we'll notify you the moment it hits the App Store.</p>
-    <form class="waitlist-form reveal reveal-delay-3" action="#" method="POST" onsubmit="return handleWaitlist(event);">
+    <h2 class="section-title reveal reveal-delay-1" style="color:var(--white)">Launch Day Access. Zero Cost to Start.</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Join the waitlist and get notified the moment NexGenSpec hits the App Store. First 3 inspections are free &mdash; no credit card required.</p>
+    <!-- TODO: Replace YOUR_FORM_ID with actual Formspree form ID from https://formspree.io -->
+    <form class="waitlist-form reveal reveal-delay-3" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return handleWaitlist(event);">
       <input type="email" name="email" class="waitlist-input" placeholder="you@example.com" required aria-label="Email address">
+      <input type="hidden" name="_subject" value="New NexGenSpec Waitlist Signup">
       <button type="submit" class="waitlist-btn">Join Waitlist</button>
     </form>
     <p class="waitlist-note reveal reveal-delay-3">No spam, ever. Just a one-time launch notification.</p>
@@ -1163,20 +1206,32 @@ document.querySelectorAll('.legal-modal-overlay').forEach(el => {
   });
 });
 
-// Waitlist form handler (mailto fallback)
+// TODO: Replace YOUR_FORM_ID with actual Formspree form ID from https://formspree.io
+// Waitlist form handler (Formspree integration)
 function handleWaitlist(e) {
   e.preventDefault();
-  var email = e.target.querySelector('input[name="email"]').value;
-  var btn = e.target.querySelector('.waitlist-btn');
-  // Open mailto as fallback
-  window.location.href = 'mailto:contact@nexgenspec.com?subject=NexGenSpec%20Waitlist&body=Please%20add%20me%20to%20the%20NexGenSpec%20waitlist.%0A%0AEmail%3A%20' + encodeURIComponent(email);
-  // Show confirmation
-  btn.textContent = 'Request Sent!';
-  btn.style.background = '#10b981';
-  setTimeout(function() {
+  var form = e.target;
+  var data = new FormData(form);
+  var btn = form.querySelector('.waitlist-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(function(response) {
+    if (response.ok) {
+      form.innerHTML = '<p style="font-family:inherit;font-size:1rem;color:var(--gray-400);text-align:center;margin:0;">You\u2019re on the list. We\u2019ll notify you at launch.</p>';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Join Waitlist';
+      form.innerHTML = '<p style="font-family:inherit;font-size:1rem;color:var(--gray-400);text-align:center;margin:0;">Something went wrong. Email us at <a href="mailto:contact@nexgenspec.com" style="color:var(--cyan);">contact@nexgenspec.com</a></p>';
+    }
+  }).catch(function() {
+    btn.disabled = false;
     btn.textContent = 'Join Waitlist';
-    btn.style.background = '';
-  }, 3000);
+    form.innerHTML = '<p style="font-family:inherit;font-size:1rem;color:var(--gray-400);text-align:center;margin:0;">Something went wrong. Email us at <a href="mailto:contact@nexgenspec.com" style="color:var(--cyan);">contact@nexgenspec.com</a></p>';
+  });
   return false;
 }
 
