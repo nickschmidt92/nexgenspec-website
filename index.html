@@ -1075,8 +1075,7 @@ section[id] { scroll-margin-top: 80px; }
     <div class="section-label reveal">Early Access</div>
     <h2 class="section-title reveal reveal-delay-1" style="color:var(--white)">Launch Day Access. Zero Cost to Start.</h2>
     <p class="section-subtitle reveal reveal-delay-2">Join the waitlist and get notified the moment NexGenSpec hits the App Store. First 3 inspections are free &mdash; no credit card required.</p>
-    <!-- TODO: Replace YOUR_FORM_ID with actual Formspree form ID from https://formspree.io -->
-    <form class="waitlist-form reveal reveal-delay-3" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return handleWaitlist(event);">
+    <form class="waitlist-form reveal reveal-delay-3" action="https://formspree.io/f/mwvaezwb" method="POST" onsubmit="return handleWaitlist(event);">
       <input type="email" name="email" class="waitlist-input" placeholder="you@example.com" required aria-label="Email address">
       <input type="hidden" name="_subject" value="New NexGenSpec Waitlist Signup">
       <button type="submit" class="waitlist-btn">Join Waitlist</button>
@@ -1173,7 +1172,7 @@ document.querySelectorAll('.legal-modal-overlay').forEach(el => {
   });
 });
 
-// TODO: Replace YOUR_FORM_ID with actual Formspree form ID from https://formspree.io
+// Formspree form ID: mwvaezwb
 // Waitlist form handler (Formspree integration)
 function handleWaitlist(e) {
   e.preventDefault();
