@@ -1,0 +1,23 @@
+# Excluded from git snapshot (regenerable / OS junk)
+# Full byte-level backup is in the tarball at ~/Backups/nickos-reorg-2026-05-03/
+
+node_modules/
+.cache/
+.next/
+dist/
+build/
+out/
+.DS_Store
+*.log
+.env
+.env.local
+
+# Xcode
+*.xcuserdata/
+DerivedData/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

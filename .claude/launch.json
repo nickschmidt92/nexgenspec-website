@@ -6,6 +6,54 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8090"],
       "port": 8090
+    },
+    {
+      "name": "nickos",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8137", "-d", "/Users/nicholasschmidt/NickOS_Code"],
+      "port": 8137
+    },
+    {
+      "name": "bsdub-logo",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8191", "-d", "/Users/nicholasschmidt/Claude #86/bsdub-logo"],
+      "port": 8191
+    },
+    {
+      "name": "bsdub-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8192", "-d", "/Users/nicholasschmidt/Claude #86/bsdub-site/public"],
+      "port": 8192
+    },
+    {
+      "name": "northbound-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8193", "-d", "/Users/nicholasschmidt/Claude #86/northbound-site"],
+      "port": 8193
+    },
+    {
+      "name": "dia-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8194", "-d", "/Users/nicholasschmidt/Claude #86/dia-site"],
+      "port": 8194
+    },
+    {
+      "name": "ai-phone-dashboard",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/nicholasschmidt/Claude #86/ai-phone-system/dashboard"],
+      "port": 5173
+    },
+    {
+      "name": "northbound-seo",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/tmp/nbseo-frontend", "--", "--port", "3001"],
+      "port": 3001
+    },
+    {
+      "name": "nexgenspec-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8195", "-d", "/tmp/nexgenspec-site-preview"],
+      "port": 8195
     }
   ]
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background: transparent; }
+  body { display:flex; align-items:center; justify-content:center; width:100vw; height:100vh; }
+  svg { width: 100vmin; height: 100vmin; display:block; }
+</style>
+</head>
+<body>
+<script>
+  const params = new URLSearchParams(location.search);
+  const src = params.get('src') || 'logo-final-red.svg';
+  const bg = params.get('bg') || 'transparent';
+  document.body.style.background = bg;
+  fetch(src).then(r => r.text()).then(svg => {
+    document.body.innerHTML = svg;
+    const s = document.querySelector('svg');
+    s.style.width = '100vmin';
+    s.style.height = '100vmin';
+    // Wait for fonts, then mark ready
+    document.fonts.ready.then(() => {
+      document.title = 'READY';
+    });
+  });
+</script>
+</body>
+</html>
