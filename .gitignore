@@ -1,0 +1,8 @@
+# Local working artifacts — never deploy
+_server_backups/
+*.zip
+.DS_Store
+
+# Hostinger File Manager / editor metadata
+*.bak
+*.orig

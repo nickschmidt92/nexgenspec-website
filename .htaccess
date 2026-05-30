@@ -1,4 +1,88 @@
+# ============================================
+# NexGenSpec — Hostinger / LiteSpeed .htaccess
+# HTTPS, long-cache static assets, modern image MIME, security
+# Updated: 2026-04-24 (Lighthouse perf pass)
+# ============================================
+
 RewriteEngine On
 
-# Serve index.html for /privacy, /terms, /support so the SPA modal auto-opens
-RewriteRule ^(privacy|terms|support)/?$ /index.html [L,QSA]
+# --- Force HTTPS ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Clean URL → .html mapping ---
+# The iOS app's Info.plist and ASC submission URLs use extension-less
+# paths (https://nexgenspec.com/privacy, /terms). LiteSpeed's MultiViews
+# isn't honored on Hostinger shared, so we map explicitly.
+RewriteRule ^privacy/?$ /privacy.html [L]
+RewriteRule ^terms/?$   /terms.html   [L]
+
+# --- Modern image MIME types ---
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
+</IfModule>
+
+# --- Compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml text/xml application/xml application/xhtml+xml
+</IfModule>
+
+# --- Expires (fallback) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                              "access plus 1 month"
+  ExpiresByType text/html                     "access plus 1 hour"
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType text/javascript               "access plus 1 year"
+  ExpiresByType image/png                     "access plus 1 year"
+  ExpiresByType image/jpeg                    "access plus 1 year"
+  ExpiresByType image/gif                     "access plus 1 year"
+  ExpiresByType image/webp                    "access plus 1 year"
+  ExpiresByType image/avif                    "access plus 1 year"
+  ExpiresByType image/svg+xml                 "access plus 1 year"
+  ExpiresByType image/x-icon                  "access plus 1 year"
+  ExpiresByType font/woff2                    "access plus 1 year"
+  ExpiresByType font/woff                     "access plus 1 year"
+</IfModule>
+
+# --- Cache-Control (primary) ---
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|mjs)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpg|jpeg|gif|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(woff|woff2|ttf|eot|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# --- Security Headers ---
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Clean URLs: /privacy auto-resolves to privacy.html, /terms to terms.html.
+# Required because the iOS app's Info.plist Privacy/Terms URLs and the ASC
+# submission URLs point to extension-less paths.
+Options -Indexes +MultiViews
+
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+ErrorDocument 404 /index.html
