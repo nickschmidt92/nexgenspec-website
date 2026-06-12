@@ -10,6 +10,10 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# --- Canonical host: www -> apex (added 2026-06-11) ---
+RewriteCond %{HTTP_HOST} ^www\.nexgenspec\.com$ [NC]
+RewriteRule ^(.*)$ https://nexgenspec.com/$1 [L,R=301]
+
 # --- Clean URL → .html mapping ---
 # The iOS app's Info.plist and ASC submission URLs use extension-less
 # paths (https://nexgenspec.com/privacy, /terms). LiteSpeed's MultiViews
