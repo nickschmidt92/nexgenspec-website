@@ -20,6 +20,7 @@ RewriteRule ^(.*)$ https://nexgenspec.com/$1 [L,R=301]
 # isn't honored on Hostinger shared, so we map explicitly.
 RewriteRule ^privacy/?$ /privacy.html [L]
 RewriteRule ^terms/?$   /terms.html   [L]
+RewriteRule ^vs-spectora/?$ /vs-spectora.html [L]
 
 # --- Modern image MIME types ---
 <IfModule mod_mime.c>
