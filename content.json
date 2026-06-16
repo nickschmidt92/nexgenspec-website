@@ -1,0 +1,434 @@
+{
+  "business": {
+    "name": "Ramps and Rails CO",
+    "tagline": "Skater owned. Skater built. Locally made.",
+    "shortDescription": "Custom skate ramps designed, built, and delivered out of Boulder, Colorado. Brand new, made-to-order ramps for all abilities — fractions of the cost of name brands.",
+    "longDescription": "Ramps and Rails CO is a skater-owned shop in Boulder, Colorado building custom wooden skate ramps and rails. Every ramp is built locally, made to order, and designed to last. From beginner-friendly launch ramps and quarter pipes to full backyard mini ramps, spines, and one-of-a-kind multi-purpose obstacles — if you can dream it, we can build it.",
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado",
+      "country": "USA"
+    },
+    "instagram": {
+      "handle": "ramps_and_rails_co",
+      "url": "https://www.instagram.com/ramps_and_rails_co",
+      "displayName": "Ramps an Rails CO"
+    },
+    "valueProps": [
+      "Skater-owned and skater-built",
+      "Locally made in Colorado",
+      "Brand new, made to order",
+      "Fractions of the cost of name brands",
+      "Delivered assembled",
+      "Custom builds for any size or shape",
+      "On-site backyard builds available",
+      "Multiple finish upgrades (seal, stain, paint)"
+    ]
+  },
+  "products": [
+    {
+      "id": "kicker",
+      "name": "R&R Kicker (Launch Ramp)",
+      "tagline": "Versatile, portable, cost-effective and FUN.",
+      "description": "One of the most popular skate ramps out there. Endless trick possibilities — launch, kick, flip, slide. Available in multiple heights and widths, with premade ones on hand or shipped to your door as an R&R Kit.",
+      "available": ["Multiple heights", "Multiple widths", "Pre-made or shipped DIY kit"],
+      "tags": ["launch", "kicker", "ramp", "beginner-friendly", "shippable"]
+    },
+    {
+      "id": "quarter-pipe",
+      "name": "Everyday Quarter Pipe",
+      "tagline": "Just the right fit.",
+      "description": "Why invest in a ramp that's too big to learn on, too heavy to move, and similar to one at any skatepark? Our QPs are sized for home use — easy to learn on, easy to move, fun for all levels.",
+      "startingPrice": 200,
+      "heights": ["12\"", "16\"", "20\"", "24\""],
+      "width": "4'",
+      "notes": "Other heights available on request. Add angled steel to the deck for a 3-in-1 combo (QP + launch + grind ledge).",
+      "tags": ["quarterpipe", "QP", "transition", "core"]
+    },
+    {
+      "id": "fun-box",
+      "name": "Fun Box Combo",
+      "tagline": "They wouldn't call it a fun box if it wasn't, well... FUN!",
+      "description": "2-in-1 combo: launch ramp/kicker plus ledge. Flip tricks, grinds, slides, spins, drops — all possible with just these two ramps. Sold individually or as a discounted combo.",
+      "startingPrice": 200,
+      "heights": ["6\"", "8\"", "10\"", "12\""],
+      "width": "2' (other widths available)",
+      "tags": ["combo", "kicker", "ledge", "funbox", "discount"]
+    },
+    {
+      "id": "manual-pad",
+      "name": "Manual Pad",
+      "tagline": "If we had to pick one obstacle for the rest of our lives — this would be it.",
+      "description": "Custom-built manual pads. Low, long, wide, double-grindable sides — you dream it, we build it.",
+      "tags": ["manual", "wheeliebox", "pad", "ledge"]
+    },
+    {
+      "id": "mini-ramp",
+      "name": "Mini Ramp / Half Pipe",
+      "tagline": "A miniramp a day keeps the doctor away.",
+      "description": "Backyard mini ramps and half pipes — fully custom builds, on-site construction available.",
+      "tags": ["miniramp", "halfpipe", "backyard", "build"]
+    },
+    {
+      "id": "spine-ramp",
+      "name": "Spine Ramp",
+      "tagline": "Spines are hard to skate — and build. Let us worry about the construction.",
+      "description": "Custom spine ramps built to spec. Full transitions, both sides, ready to session.",
+      "tags": ["spine", "transition", "custom"]
+    },
+    {
+      "id": "mullet",
+      "name": "The Mullet",
+      "tagline": "Business up front, party in the back.",
+      "description": "Multi-purpose ramp combining different features in a single obstacle. The first in our multi-purpose series.",
+      "tags": ["mullet", "multipurpose", "signature"]
+    },
+    {
+      "id": "butter-bench",
+      "name": "3-in-1 Butter Bench",
+      "tagline": "Three different features in one obstacle. Possibilities are endless.",
+      "description": "Combination obstacle with three skateable features in one piece. Featured in a May promotional giveaway.",
+      "tags": ["bench", "multipurpose", "combo", "signature"]
+    },
+    {
+      "id": "slacurail",
+      "name": "Slacurail (Slap Curb Rail)",
+      "tagline": "Slappy heaven.",
+      "description": "Slap-curb-rail hybrid. Curb on one side, rail on the other — slappies, grinds, and slides in one obstacle.",
+      "tags": ["slappy", "curb", "rail", "hybrid"]
+    },
+    {
+      "id": "fingerboard",
+      "name": "Free Fingerboard Ramp",
+      "tagline": "When it rains and you can't skate, we've got your fingerboard needs covered.",
+      "description": "Free fingerboard ramp included with any full-size ramp purchase.",
+      "tags": ["fingerboard", "freebie", "promo"]
+    },
+    {
+      "id": "custom-build",
+      "name": "Custom Builds",
+      "tagline": "If you build it... they will skate it.",
+      "description": "Quarter pipes, spines, banked hips — pretty much anything you can dream up. DM with what you're interested in and we'll help you out.",
+      "tags": ["custom", "design", "consultation"]
+    },
+    {
+      "id": "backyard-build",
+      "name": "On-Site Backyard Builds",
+      "tagline": "Get your summer set up before it's too late.",
+      "description": "We come to you. Full backyard build-outs — mini ramps, half pipes, complete setups installed on your property.",
+      "tags": ["backyard", "onsite", "install", "summer"]
+    },
+    {
+      "id": "garage-setup",
+      "name": "Garage Setup",
+      "tagline": "What's your dream garage set up?",
+      "description": "Every skater's dream. Full custom indoor/garage skate setups designed to your space and budget.",
+      "tags": ["garage", "indoor", "custom", "complete-setup"]
+    }
+  ],
+  "addOns": [
+    {
+      "name": "Caster Wheels (Mobility Upgrade)",
+      "description": "Add caster wheels to almost any ramp — game changer for moving and storing. Easy for one person to roll a ramp that would otherwise need 2+.",
+      "tags": ["mobile", "wheels", "storage"]
+    },
+    {
+      "name": "Bolted Steel Transitions",
+      "description": "Metal transitions are key to any wooden skate ramp — and the first thing to fall off on cheaper brands. Ours are bolted on to last, and removable with just a skate tool.",
+      "tags": ["detail", "durability", "metal"]
+    },
+    {
+      "name": "Hand Holds",
+      "description": "Every ramp comes with built-in hand holds for easy carrying. Don't break yourself before the session even starts.",
+      "tags": ["detail", "ergonomics"]
+    },
+    {
+      "name": "Weather Protection",
+      "description": "Seal, stain, or paint upgrades to protect your investment from the elements. Wood and weather don't mix — we make sure your ramp lasts.",
+      "options": ["Seal", "Stain", "Paint"],
+      "tags": ["finish", "weatherproof", "upgrade"]
+    },
+    {
+      "name": "Assembled Delivery",
+      "description": "Delivered to your door, fully assembled. No hex keys, no 80-page instructions, no weekend lost to assembly.",
+      "tags": ["delivery", "service"]
+    }
+  ],
+  "whyUs": [
+    {
+      "title": "Skater-built",
+      "body": "Every ramp is designed and built by skaters who actually skate. We know what feels good and what doesn't."
+    },
+    {
+      "title": "Locally made",
+      "body": "Every ramp is manufactured here in Colorado — not flat-packed from overseas."
+    },
+    {
+      "title": "Built to last",
+      "body": "Bolted steel transitions, quality plywood, weather-protection options. Designed for years of sessions."
+    },
+    {
+      "title": "Fair pricing",
+      "body": "Quarter pipes start at $200. Fractions of the cost of name brands. No middlemen, no markup."
+    },
+    {
+      "title": "Made to order",
+      "body": "Tell us your space, your style, your budget — we'll build something that fits."
+    },
+    {
+      "title": "All abilities",
+      "body": "From a kid's first launch ramp to backyard half pipes for advanced skaters."
+    }
+  ],
+  "audiences": [
+    {
+      "name": "Parents",
+      "hook": "Help keep your kids off screens and outside with smiles on their faces.",
+      "context": "Affordable, kid-sized ramps for at-home setups. Same-day order and delivery available."
+    },
+    {
+      "name": "Backyard skaters",
+      "hook": "Get your summer setup before it's too late.",
+      "context": "Mini ramps, half pipes, and on-site backyard builds."
+    },
+    {
+      "name": "Skate parks / programs",
+      "hook": "Custom builds, multi-obstacle setups, durable construction.",
+      "context": "Bulk and program pricing available — DM for quotes."
+    },
+    {
+      "name": "Apartment / garage skaters",
+      "hook": "Mobile, compact, fun.",
+      "context": "Caster-wheel add-ons, low-profile QPs, fun boxes — designed for tight spaces."
+    }
+  ],
+  "calloutQuotes": [
+    "Skater owner, skater built. Local and custom.",
+    "If you build it... they will skate it.",
+    "You dream it, we can build it.",
+    "Don't WEDGE yourself into a skateless day.",
+    "Just the right fit.",
+    "It's about the details.",
+    "A miniramp a day keeps the doctor away."
+  ],
+  "ctas": {
+    "primary": "DM us to get yours",
+    "secondary": "Message us with questions",
+    "tertiary": "Order an R&R Kit",
+    "quote": "Get a custom quote"
+  },
+  "faqs": [
+    {
+      "q": "Do you ship?",
+      "a": "Yes — order our R&R Kit and we deliver to your door. Local Colorado deliveries can come fully assembled."
+    },
+    {
+      "q": "Do you do custom sizes?",
+      "a": "Yes. Most of our standard ramps come in multiple heights and widths, and we'll build custom dimensions on request."
+    },
+    {
+      "q": "Can you build at my house?",
+      "a": "Yes. We do on-site backyard builds — mini ramps, half pipes, and complete setups."
+    },
+    {
+      "q": "What's the cheapest ramp you offer?",
+      "a": "Our small Everyday Quarter Pipes start at $200. Fun Box combos start at $200 as well."
+    },
+    {
+      "q": "How is your ramp better than a used one online?",
+      "a": "Brand new. Skater designed and built. Locally made. Fractions of the cost of name brands. Delivered assembled. Multiple upgrades available."
+    },
+    {
+      "q": "Do your ramps hold up outside?",
+      "a": "With our seal, stain, or paint upgrades — yes. Wood and weather don't mix, so we recommend at least sealing if your ramp lives outdoors."
+    }
+  ],
+  "designNotes": {
+    "vibe": "Bold, gritty, skate-shop authentic. Not corporate. Hand-built energy.",
+    "colorPalette": {
+      "suggested": [
+        {"name": "Deck Black", "hex": "#0F0F0F"},
+        {"name": "Ramp Wood", "hex": "#C68642"},
+        {"name": "Steel Coping", "hex": "#A8A8A8"},
+        {"name": "Spray Orange", "hex": "#FF5A1F"},
+        {"name": "Concrete White", "hex": "#F4F1EC"}
+      ]
+    },
+    "typography": {
+      "suggested": "Heavy condensed sans for headings (e.g., Bebas Neue, Anton, Oswald). Clean grotesk for body (Inter, Manrope, or system sans)."
+    },
+    "tone": "Punchy, playful, full of skate puns ('LAUNCH out of your seat', 'get a KICK(er)', 'WEDGE yourself'). Don't sand off the personality."
+  },
+  "images": {
+    "directory": "images/",
+    "note": "37 product photos extracted from the @ramps_and_rails_co Instagram. Paths are relative to content.json. All images are 1080px wide (mostly portrait or square).",
+    "hero": "images/01-hero-brand-video.jpg",
+    "byProduct": {
+      "kicker":         ["images/02-kicker-launch.jpg", "images/03-kicker-detail.jpg"],
+      "quarter-pipe":   ["images/27-quarter-pipe.jpg", "images/28-quarter-pipe-2.jpg"],
+      "fun-box":        ["images/29-funbox.jpg", "images/30-funbox-2.jpg"],
+      "manual-pad":     ["images/19-manual-pad.jpg", "images/20-manual-pad-2.jpg"],
+      "mini-ramp":      ["images/11-miniramp-build.jpg", "images/14-backyard-build-1.jpg", "images/15-backyard-build-2.jpg", "images/16-backyard-build-3.jpg"],
+      "spine-ramp":     ["images/12-spine-ramp.jpg", "images/13-spine-ramp-2.jpg", "images/04-custom-build-spine.jpg"],
+      "mullet":         ["images/17-mullet.jpg", "images/18-mullet-2.jpg"],
+      "butter-bench":   ["images/08-butter-bench.jpg", "images/09-butter-bench-2.jpg", "images/10-butter-bench-3.jpg"],
+      "slacurail":      ["images/34-slacurail.jpg", "images/35-slacurail-2.jpg"],
+      "custom-build":   ["images/04-custom-build-spine.jpg", "images/05-custom-build-2.jpg"],
+      "backyard-build": ["images/14-backyard-build-1.jpg", "images/15-backyard-build-2.jpg", "images/16-backyard-build-3.jpg"],
+      "garage-setup":   ["images/21-garage-setup.jpg", "images/22-garage-setup-2.jpg"]
+    },
+    "byAddOn": {
+      "caster-wheels":   ["images/25-caster-wheels.jpg", "images/26-caster-wheels-2.jpg"],
+      "transitions":     ["images/06-detail-transitions.jpg", "images/07-detail-transitions-2.jpg"],
+      "hand-holds":      ["images/33-handhold-detail.jpg"],
+      "weather-finish":  ["images/31-weather-upgrade.jpg", "images/32-weather-upgrade-2.jpg"]
+    },
+    "lifestyle": [
+      "images/23-build-process.jpg",
+      "images/24-family-delivery.jpg",
+      "images/36-customer-rav.jpg",
+      "images/37-customer-rav-2.jpg"
+    ]
+  },
+  "instagramPosts": [
+    {
+      "url": "https://www.instagram.com/p/DVy6QLXj7U8/",
+      "type": "video",
+      "caption": "Skater owner, skater built. Local and custom.",
+      "isHero": true,
+      "tags": ["intro", "brand-video"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DVy68EkFp-Z/",
+      "type": "carousel",
+      "caption": "If you build it.. they will skate it!",
+      "tags": ["custom", "quarter-pipe", "spine"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DXntpkJlvIH/",
+      "type": "carousel",
+      "caption": "Introducing the 3-in-1 Butter Bench",
+      "tags": ["butter-bench", "signature", "promo"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DXBHWwtludF/",
+      "type": "carousel",
+      "caption": "Introducing: The Mullet — business up front, party in the back",
+      "tags": ["mullet", "signature", "multipurpose"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DXlHKMylt0k/",
+      "type": "carousel",
+      "caption": "A miniramp a day keeps the doctor away",
+      "tags": ["miniramp", "halfpipe", "build-process"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DXdJibpFsag/",
+      "type": "carousel",
+      "caption": "We do on-site backyard builds too! Get your summer set up before it's too late",
+      "tags": ["backyard", "miniramp"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DW0OSy6lk2G/",
+      "type": "carousel",
+      "caption": "Detail Alert: bolted metal transitions that last",
+      "tags": ["detail", "transitions", "quality"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWxn-xYFn0w/",
+      "type": "carousel",
+      "caption": "R&R Kicker — get a KICK(er) out of one of the most popular skate ramps",
+      "tags": ["kicker", "launch", "kit"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DW2xXslFqgn/",
+      "type": "carousel",
+      "caption": "Spine ramps — let us worry about construction",
+      "tags": ["spine", "custom"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DVzy5HqlgOQ/",
+      "type": "carousel",
+      "caption": "Manual pads — our pick for one obstacle for the rest of our lives",
+      "tags": ["manual", "ledge"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DVzmeFSFg2-/",
+      "type": "carousel",
+      "caption": "Everyday Quarter Pipe — just the right fit, starting at $200",
+      "tags": ["quarter-pipe", "pricing"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DVzkG6JlgQd/",
+      "type": "carousel",
+      "caption": "Fun Box combo — 2-in-1 launch ramp + ledge, $200",
+      "tags": ["funbox", "combo", "pricing"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DVzwxRClkJi/",
+      "type": "carousel",
+      "caption": "Caster wheels add-on — make your ramp mobile",
+      "tags": ["addon", "mobility"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWaiqRsGrWL/",
+      "type": "carousel",
+      "caption": "Seal, stain, or paint upgrades — protect your ramp from the elements",
+      "tags": ["addon", "weatherproof"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWU9lE7FnA9/",
+      "type": "carousel",
+      "caption": "All ramps come with built-in hand holds",
+      "tags": ["detail", "ergonomics"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWiTEIjlsP8/",
+      "type": "carousel",
+      "caption": "Same-day order and delivery — keep kids off screens",
+      "tags": ["family", "delivery"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWZO3Qmlpds/",
+      "type": "carousel",
+      "caption": "Dream garage setups — full custom",
+      "tags": ["garage", "complete-setup"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DW-rD60FhAv/",
+      "type": "carousel",
+      "caption": "Free fingerboard ramp with every full-size ramp purchase",
+      "tags": ["fingerboard", "promo"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DXNMoYOFsAw/",
+      "type": "carousel",
+      "caption": "The Slacurail — slap curb rail hybrid",
+      "tags": ["slappy", "rail", "curb"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DXInpgcDzRv/",
+      "type": "video",
+      "caption": "Two-for-Tuesday — cranking out custom builds",
+      "tags": ["build-process"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWk1TQHD4Pm/",
+      "type": "video",
+      "caption": "Another one down — we crank them out fast",
+      "tags": ["build-process", "behind-the-scenes"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWnegXfFl2m/",
+      "type": "carousel",
+      "caption": "Don't get burned by used internet ramps — brand new, skater-built, fractions of the cost of name brands",
+      "tags": ["why-us", "comparison"]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWtxEJfDohW/",
+      "type": "carousel",
+      "caption": "Customer feature: custom QP that fits in a RAV — ramp in a RAV!",
+      "tags": ["testimonial", "customer", "compact"]
+    }
+  ]
+}
