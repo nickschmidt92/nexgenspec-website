@@ -843,7 +843,7 @@ section[id] { scroll-margin-top: 80px; }
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "iOS, iPadOS",
     "offers": [
-      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "First 3 inspections free, full feature access"},
+      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "First 3 inspections free with full feature access; free-tier reports carry a small watermark"},
       {"@type": "Offer", "name": "NexGenSpec Pro Monthly", "price": "49.00", "priceCurrency": "USD"},
       {"@type": "Offer", "name": "NexGenSpec Pro Annual", "price": "449.00", "priceCurrency": "USD"}
     ],
@@ -946,7 +946,7 @@ section[id] { scroll-margin-top: 80px; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3>Calendar Integration</h3>
-        <p>Schedule inspections and they appear automatically on your iPhone or iPad calendar &mdash; with the property address, client contact info, and job ID. Cancel an inspection and the event clears too.</p>
+        <p>Schedule inspections and they appear automatically on your iPhone or iPad calendar &mdash; with the property address, client contact info, and job ID. NexGenSpec also checks your existing events and flags scheduling conflicts. Cancel an inspection and the event clears too.</p>
       </div>
       <div class="feature-card reveal reveal-delay-2">
         <div class="feature-icon">
@@ -1552,6 +1552,7 @@ function handleWaitlist(e) {
         <li>To generate PDF reports and invoices</li>
         <li>To diagnose crashes and improve app stability</li>
         <li>To verify your subscription entitlement</li>
+        <li>If you grant Calendar access, to add inspection appointments to a calendar you choose and flag scheduling conflicts with your existing events &mdash; calendar data stays on your device</li>
       </ul>
 
       <h4>Data Storage and Security</h4>
@@ -1569,7 +1570,7 @@ function handleWaitlist(e) {
       <h4>Your Rights</h4>
       <ul>
         <li>You can delete your account and all associated data by contacting contact@nexgenspec.com</li>
-        <li>You can deny or revoke location, camera, microphone, and photo library permissions at any time in iOS Settings</li>
+        <li>You can deny or revoke location, camera, microphone, calendar, and photo library permissions at any time in iOS Settings</li>
         <li>You can request a copy of any data we hold about you</li>
       </ul>
 
