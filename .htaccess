@@ -20,6 +20,7 @@ RewriteRule ^(.*)$ https://nexgenspec.com/$1 [L,R=301]
 # isn't honored on Hostinger shared, so we map explicitly.
 RewriteRule ^privacy/?$ /privacy.html [L]
 RewriteRule ^terms/?$   /terms.html   [L]
+RewriteRule ^support/?$ /support.html [L]
 RewriteRule ^vs-spectora/?$ /vs-spectora.html [L]
 
 # --- Modern image MIME types ---
@@ -90,4 +91,4 @@ Options -Indexes +MultiViews
   Deny from all
 </FilesMatch>
 
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
