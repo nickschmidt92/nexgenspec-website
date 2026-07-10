@@ -6,12 +6,16 @@
   <title>Support - NexGenSpec</title>
   <meta name="description" content="NexGenSpec support and help. Contact us, manage your subscription, export inspections, and find answers to common questions about the iPad home inspection app.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.nexgenspec.com/support.html">
+  <link rel="canonical" href="https://nexgenspec.com/support">
+  <meta property="og:site_name" content="NexGenSpec">
   <meta property="og:title" content="Support - NexGenSpec">
   <meta property="og:description" content="Get help with NexGenSpec. Contact support, manage your subscription, and find answers to common questions.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nexgenspec.com/support.html">
+  <meta property="og:url" content="https://nexgenspec.com/support">
   <meta property="og:image" content="https://nexgenspec.com/logo.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="851">
+  <meta property="og:image:alt" content="NexGenSpec logo">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Support - NexGenSpec">
   <meta name="twitter:description" content="Contact NexGenSpec support, manage subscriptions, and find answers to common questions about the iPad home inspection app.">
@@ -20,9 +24,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-  <!-- FAQ Page structured data — lets Google show rich FAQ results in search -->
+  <!-- FAQ Page structured data — helps search engines understand the page.
+       (Since 2023 Google shows FAQ rich results only for gov/health sites,
+       so no rich snippet is expected; kept for semantic clarity.) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,10 +62,10 @@
       },
       {
         "@type": "Question",
-        "name": "How do I export an inspection report?",
+        "name": "How do I export a finished inspection report?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Open the inspection, tap Finalize and complete the signatures, then tap Invoice and Send. The app generates a branded PDF and opens an email composer with the client and inspector copies attached."
+          "text": "Open the inspection, tap Finalize and collect both signatures, then tap Invoice & Send. The app generates a branded PDF with your company logo on every page and opens a mail composer with the client and inspector copies attached. You can also export the full inspection package (PDF + photos + LiDAR USDZ files) as a .zip via the Files app."
         }
       },
       {
@@ -70,10 +78,26 @@
       },
       {
         "@type": "Question",
-        "name": "What if my subscription is cancelled, do I lose my inspections?",
+        "name": "What if I cancel my subscription — do I lose past inspections?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Inspections you have already created remain readable and exportable on the device. Subscription only gates new inspections beyond the free trial and removes the watermark on PDF reports."
+          "text": "No. Inspections you have already created remain on your device and stay readable and exportable. Subscription only gates the creation of new inspections beyond the free trial allowance and removes the watermark on freshly generated PDF reports."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I back up my inspections?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NexGenSpec relies on iCloud Backup. Make sure iCloud Backup is turned on under iOS Settings. For an explicit copy of a specific inspection, use Save to Files from the inspection's share menu. iCloud Sync (on by default) keeps your inspection records, report PDFs, and floor plans on your other Apple devices, but it is not a backup — deleting an inspection removes it everywhere it synced, and full-resolution photos and videos live only on the device that captured them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does NexGenSpec work without an internet connection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Inspections are created, captured, finalized, and exported on your device, with no internet connection required for that work. Internet is used for sign-in, subscription validation, the weather stamp, sending the final PDF via email, and — when iCloud Sync is on — syncing your inspections to your other devices through your private iCloud. Pro entitlement is cached for up to 7 days offline."
         }
       }
     ]
