@@ -3,23 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexGenSpec — Home Inspection Software &amp; Report App for iPhone &amp; iPad</title>
-<meta name="description" content="NexGenSpec is a professional home inspection app for iPhone and iPad. Capture photos, generate branded PDF reports, and deliver to clients fast. Built by a licensed inspector.">
+<title>Home Inspection App &amp; Report Software for iPhone &amp; iPad | NexGenSpec</title>
+<meta name="description" content="Home inspection app for iPhone and iPad — branded PDF reports, LiDAR floor plans, photo annotation, e-signatures, invoicing. Built by a licensed home inspector.">
+<meta property="og:site_name" content="NexGenSpec">
 <meta property="og:title" content="NexGenSpec — Professional Home Inspection App">
-<meta property="og:description" content="Built by a licensed inspector. Capture evidence-grade photos, generate PDF reports, and deliver to clients from your iPhone or iPad.">
+<meta property="og:description" content="Built by a licensed inspector. Evidence-grade photos, LiDAR room scans and floor plans, branded PDF reports — all from your iPhone or iPad.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nexgenspec.com/">
 <meta property="og:image" content="https://nexgenspec.com/logo.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="851">
+<meta property="og:image:alt" content="NexGenSpec logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NexGenSpec — Professional Home Inspection App">
-<meta name="twitter:description" content="Built by a licensed inspector. Capture evidence-grade photos, generate PDF reports, and deliver to clients from your iPhone or iPad.">
+<meta name="twitter:description" content="Built by a licensed inspector. Evidence-grade photos, LiDAR room scans and floor plans, branded PDF reports — all from your iPhone or iPad.">
 <meta name="twitter:image" content="https://nexgenspec.com/logo.jpg">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='32' y2='32'%3E%3Cstop offset='0%25' stop-color='%231F6EF5'/%3E%3Cstop offset='100%25' stop-color='%2326D1EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5' fill='url(%23g)'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif' font-weight='800' font-size='18'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <style>
 :root {
   --navy: #141727;
@@ -268,9 +274,9 @@ section[id] { scroll-margin-top: 80px; }
 .section-header .section-subtitle { margin: 0 auto; }
 
 /* ── FEATURES ── */
-/* 9 cards: minmax sized so we get 3 columns at iPad portrait (834px)
+/* 12 cards: minmax sized so we get 3 columns at iPad portrait (834px)
    and desktop (1024px+), 2 columns on tighter widths, 1 column on phones.
-   Orphan-free at the most common breakpoints. */
+   Orphan-free at the most common breakpoints (12 = 3x4 = 2x6). */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -591,40 +597,6 @@ section[id] { scroll-margin-top: 80px; }
   100% { background-position: 0% 50%; }
 }
 
-/* ── MODALS ── */
-.legal-modal-overlay {
-  display: none; position: fixed; inset: 0; z-index: 2000;
-  background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  align-items: center; justify-content: center; padding: 24px;
-}
-.legal-modal-overlay.open { display: flex; }
-.legal-modal {
-  background: var(--white); border-radius: 20px; max-width: 680px; width: 100%;
-  max-height: 85vh; display: flex; flex-direction: column;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.3);
-}
-.legal-modal-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 24px 28px 16px; border-bottom: 1px solid var(--gray-100);
-}
-.legal-modal-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--navy); }
-.legal-modal-close {
-  background: none; border: none; cursor: pointer; padding: 8px;
-  color: var(--gray-500); font-size: 1.5rem; line-height: 1; border-radius: 8px;
-  transition: background var(--transition);
-}
-.legal-modal-close:hover { background: var(--gray-100); }
-.legal-modal-body {
-  padding: 24px 28px 32px; overflow-y: auto; font-size: 0.9rem;
-  line-height: 1.7; color: var(--gray-600);
-}
-.legal-modal-body h4 { color: var(--navy); font-size: 1rem; margin: 20px 0 8px; }
-.legal-modal-body h4:first-child { margin-top: 0; }
-.legal-modal-body p { margin-bottom: 12px; }
-.legal-modal-body ul { margin: 0 0 12px 20px; }
-.legal-modal-body li { margin-bottom: 6px; }
-.legal-modal-date { font-size: 0.8rem; color: var(--gray-400); margin-bottom: 16px; }
-
 /* ── GET EARLY ACCESS NAV BUTTON ── */
 .btn-early-access {
   display: inline-block;
@@ -838,12 +810,24 @@ section[id] { scroll-margin-top: 80px; }
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "NexGenSpec",
-    "description": "Professional home inspection app for iPhone and iPad. Capture evidence-grade photos, generate branded PDF reports, and deliver to clients fast.",
+    "description": "Professional home inspection app for iPhone and iPad. Capture evidence-grade photos, scan rooms with LiDAR, generate branded PDF reports, and deliver to clients fast.",
     "url": "https://nexgenspec.com/",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "iOS, iPadOS",
+    "featureList": [
+      "Branded PDF inspection reports with your company logo",
+      "Photo and video capture with Apple Pencil annotation",
+      "LiDAR room scans with dimensions for spatial reference (LiDAR-equipped devices)",
+      "Whole-home floor plan assembled from room scans",
+      "Cross-device sync through the inspector's own private iCloud",
+      "Customizable section templates with custom items",
+      "E-signatures with timestamped audit trail",
+      "Invoicing and email delivery",
+      "Calendar integration and automatic weather logging",
+      "Drone and thermal imagery import"
+    ],
     "offers": [
-      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "First 3 inspections free with full feature access; free-tier reports carry a small watermark"},
+      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "First 3 inspections free and full-featured; free-tier reports carry a small watermark"},
       {"@type": "Offer", "name": "NexGenSpec Pro Monthly", "price": "49.00", "priceCurrency": "USD"},
       {"@type": "Offer", "name": "NexGenSpec Pro Annual", "price": "449.00", "priceCurrency": "USD"}
     ],
@@ -856,7 +840,7 @@ section[id] { scroll-margin-top: 80px; }
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><picture><source type="image/webp" srcset="icon-hex-48.webp 1x, icon-hex.webp 2x"><img src="icon-hex.png?v=3" alt="NexGenSpec" class="nav-logo-icon" decoding="async" width="32" height="32"></picture>NexGenSpec</a>
+    <a href="/" class="nav-logo"><picture><source type="image/webp" srcset="icon-hex-48.webp 1x, icon-hex.webp 2x"><img src="icon-hex.png?v=3" alt="NexGenSpec" class="nav-logo-icon" decoding="async" width="32" height="32"></picture>NexGenSpec</a>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
@@ -885,7 +869,7 @@ section[id] { scroll-margin-top: 80px; }
       Launching Soon &mdash; Join the Waitlist
     </div>
     <h1 class="reveal reveal-delay-1">Built by Inspectors.<br>For Inspectors.</h1>
-    <p class="reveal reveal-delay-2">The professional home inspection app for iPhone &amp; iPad. Capture evidence-grade photos, generate PDF reports with your logo, and deliver to clients fast &mdash; designed by a licensed inspector in the Denver Metro area.</p>
+    <p class="reveal reveal-delay-2">The professional home inspection app for iPhone &amp; iPad. Capture evidence-grade photos, scan rooms and floor plans with LiDAR, and deliver branded PDF reports to clients fast &mdash; designed by a licensed inspector in the Denver Metro area.</p>
     <div class="hero-buttons reveal reveal-delay-3">
       <a href="#cta" class="hero-cta">Get Early Access</a>
     </div>
@@ -910,31 +894,46 @@ section[id] { scroll-margin-top: 80px; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
         </div>
         <h3>Structured Inspections</h3>
-        <p>Customizable templates for Roof, Electrical, Plumbing, HVAC, and more. Organize every inspection consistently.</p>
+        <p>Customizable templates for Roof, Electrical, Plumbing, HVAC, and more &mdash; plus custom items you add to any section on the fly. Organize every inspection consistently.</p>
       </div>
       <div class="feature-card reveal reveal-delay-1">
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <h3>Photo Capture &amp; Annotation</h3>
-        <p>Take photos, mark defects with arrows, circles, and PencilKit drawings. Evidence-grade documentation made easy.</p>
+        <h3>Photo &amp; Video Capture</h3>
+        <p>Take photos and walk-through video, then mark up defects with arrows, circles, and PencilKit drawings. Evidence-grade documentation made easy.</p>
       </div>
       <div class="feature-card reveal reveal-delay-2">
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <h3>LiDAR Room Scanning<sup style="font-size:0.6em;color:var(--blue);">*</sup></h3>
-        <p>Capture 3D room dimensions on iPad Pro and iPhone Pro models. Accurate measurements without a tape measure.</p>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:6px;font-style:italic;"><sup>*</sup>Requires a device with a LiDAR sensor. <a href="#faq-lidar" style="color:var(--blue);">Supported devices</a></p>
+        <h3>LiDAR Room Scans &amp; Dimensions<sup style="font-size:0.6em;color:var(--blue);">*</sup></h3>
+        <p>Scan a room in 3D and capture its dimensions for quick spatial reference &mdash; then attach scans to individual report sections so the context lands right where the finding is.</p>
+        <p style="font-size:0.75rem;color:#94a3b8;margin-top:6px;font-style:italic;"><sup>*</sup>Requires a device with a LiDAR sensor. <a href="support.html" style="color:var(--blue);">Supported devices</a></p>
       </div>
       <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="12" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="12" y1="16" x2="21" y2="16"/></svg>
+        </div>
+        <h3>Whole-Home Floor Plan<sup style="font-size:0.6em;color:var(--blue);">*</sup></h3>
+        <p>Scan room by room and NexGenSpec assembles a top-down floor plan of the home for the report &mdash; a clean spatial reference that helps clients place every finding. It&rsquo;s a visual guide, not a measured architectural drawing.</p>
+        <p style="font-size:0.75rem;color:#94a3b8;margin-top:6px;font-style:italic;"><sup>*</sup>Generated from LiDAR room scans; requires a device with a LiDAR sensor.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-4">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="10" height="16" rx="2"/><rect x="15" y="7" width="7" height="13" rx="2"/><path d="M7 4V2"/></svg>
+        </div>
+        <h3>Cross-Device Sync</h3>
+        <p>Start an inspection on your iPhone, review and deliver it from your iPad. Records, report PDFs, thumbnails, and floor plans sync across your own Apple devices through your <strong>private iCloud</strong> &mdash; never through a NexGenSpec server.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-5">
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
         <h3>PDF Reports &amp; Invoicing</h3>
         <p>Generate professional reports featuring your company logo and email them directly to clients &mdash; from finalized inspection to PDF in seconds.</p>
       </div>
-      <div class="feature-card reveal reveal-delay-5">
+      <div class="feature-card reveal">
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
         </div>
@@ -943,26 +942,33 @@ section[id] { scroll-margin-top: 80px; }
       </div>
       <div class="feature-card reveal reveal-delay-1">
         <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.39 0 4.68.94 6.36 2.64"/></svg>
+        </div>
+        <h3>E-Signatures &amp; Audit Trail</h3>
+        <p>Capture inspector and client signatures on-site, each stamped with a timestamp. Every signature, terms acceptance, and report finalization is logged &mdash; a clean, defensible record of what was signed and when.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3>Calendar Integration</h3>
         <p>Schedule inspections and they appear automatically on your iPhone or iPad calendar &mdash; with the property address, client contact info, and job ID. NexGenSpec also checks your existing events and flags scheduling conflicts. Cancel an inspection and the event clears too.</p>
       </div>
-      <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-card reveal reveal-delay-3">
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/><circle cx="6.5" cy="7.5" r="2"/></svg>
         </div>
         <h3>Weather Logging</h3>
         <p>Inspection-day weather conditions are pulled automatically from Open-Meteo and stamped onto the report &mdash; one less variable to defend later if a finding is challenged.</p>
       </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.39 0 4.68.94 6.36 2.64"/></svg>
-        </div>
-        <h3>Audit Trail &amp; Acceptance Logs</h3>
-        <p>Every signature, terms acceptance, and report finalization is timestamped on-device. If a finding is ever questioned, you have a clean, defensible record of what was signed and when.</p>
-      </div>
       <div class="feature-card reveal reveal-delay-4">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <h3>Drone &amp; Thermal Import</h3>
+        <p>Bring drone shots and thermal imagery in from your photo library &mdash; AirDrop them over, attach them to the inspection, and they flow into the report alongside your photos.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-5">
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
@@ -1031,7 +1037,7 @@ section[id] { scroll-margin-top: 80px; }
       </div>
       <div class="proof-tile reveal reveal-delay-1">
         <div class="proof-value">100%</div>
-        <div class="proof-label">On-device. Inspections work offline.</div>
+        <div class="proof-label">Offline-capable &mdash; basements, attics, crawl spaces</div>
       </div>
       <div class="proof-tile reveal reveal-delay-2">
         <div class="proof-value">0</div>
@@ -1056,7 +1062,7 @@ section[id] { scroll-margin-top: 80px; }
     <div class="section-header">
       <div class="section-label reveal">Pricing</div>
       <h2 class="section-title reveal reveal-delay-1">Simple, transparent pricing.</h2>
-      <p class="section-subtitle reveal reveal-delay-2">One plan, every feature. No hidden fees, no surprises.</p>
+      <p class="section-subtitle reveal reveal-delay-2">One plan. No per-report fees, no hidden charges, no surprises.</p>
     </div>
     <div class="pricing-grid">
 
@@ -1093,7 +1099,7 @@ section[id] { scroll-margin-top: 80px; }
       </div>
 
     </div>
-    <p class="pricing-note reveal"><strong>Start free</strong> &mdash; your first 3 inspections include full access to every feature: LiDAR scanning, Apple Pencil annotation, logo'd PDF export, and invoicing. Free-tier reports carry a small NexGenSpec watermark. No credit card required.</p>
+    <p class="pricing-note reveal"><strong>Start free</strong> &mdash; your first 3 inspections are full-featured: LiDAR scanning, Apple Pencil annotation, logo'd PDF export, and invoicing all included. Free-tier reports carry a small NexGenSpec watermark. No credit card required.</p>
     <p class="pricing-fine reveal">All purchases through the App Store. Subscriptions auto-renew unless canceled 24 hours before the end of the current period. Save ~24% with annual billing.</p>
   </div>
 </section>
@@ -1128,7 +1134,8 @@ section[id] { scroll-margin-top: 80px; }
     <ul class="footer-links">
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
-      <li><a href="#" onclick="openModal('support-modal');return false;">Support</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="vs-spectora.html">Compare vs Spectora</a></li>
       <li><a href="mailto:contact@nexgenspec.com">Contact</a></li>
     </ul>
     <div class="footer-copy">&copy; 2026 NexGenSpec. All rights reserved.</div>
@@ -1192,21 +1199,6 @@ setTimeout(function() {
   });
 }, 2000);
 
-// Legal modals
-function openModal(id) {
-  document.getElementById(id).classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.querySelectorAll('.legal-modal-overlay').forEach(el => {
-  el.addEventListener('click', (e) => {
-    if (e.target === el) closeModal(el.id);
-  });
-});
-
 // Formspree form ID: mwvaezwb
 // Waitlist form handler (Formspree integration)
 function handleWaitlist(e) {
@@ -1235,8 +1227,6 @@ function handleWaitlist(e) {
   });
   return false;
 }
-
-// Auto-open logic moved to a <script> tag AFTER the modal HTML (bottom of page)
 
 // ── Particle Network ──
 (function() {
@@ -1526,171 +1516,14 @@ function handleWaitlist(e) {
 })();
 </script>
 
-<!-- PRIVACY POLICY MODAL -->
-<div class="legal-modal-overlay" id="privacy-modal">
-  <div class="legal-modal">
-    <div class="legal-modal-header">
-      <h3>Privacy Policy</h3>
-      <button class="legal-modal-close" onclick="closeModal('privacy-modal')">&times;</button>
-    </div>
-    <div class="legal-modal-body">
-      <div class="legal-modal-date">Effective Date: May 30, 2026</div>
-      <p>NexGenSpec ("we," "our," or "the app") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights.</p>
-
-      <h4>What We Collect</h4>
-      <ul>
-        <li><strong>Account Information:</strong> Email address and password used to create your account. If you sign in with Apple, we receive your Apple ID identifier and optional email.</li>
-        <li><strong>Inspection Data:</strong> Client names, property addresses, inspection notes, photos, annotations, signatures, LiDAR scans, and videos you create within the app. This data is stored locally on your device.</li>
-        <li><strong>Location Data:</strong> When you grant permission, we use your device location to auto-fill property addresses and to record inspection-day weather. For weather, your approximate location is sent to Open-Meteo (a third-party weather API) to retrieve the conditions stamped onto your report. Location is used only at the moment of the request, is not stored on our servers, and is not used for tracking.</li>
-        <li><strong>Device Information:</strong> Device model, OS version, and crash logs are collected via Firebase Crashlytics to diagnose and fix issues.</li>
-        <li><strong>Purchase Information:</strong> Subscription status is managed by Apple. We do not collect or store your payment details.</li>
-      </ul>
-
-      <h4>How We Use Your Data</h4>
-      <ul>
-        <li>To provide the core inspection workflow (reports, photos, annotations, signatures)</li>
-        <li>To generate PDF reports and invoices</li>
-        <li>To diagnose crashes and improve app stability</li>
-        <li>To verify your subscription entitlement</li>
-        <li>If you grant Calendar access, to add inspection appointments to a calendar you choose and flag scheduling conflicts with your existing events &mdash; calendar data stays on your device</li>
-      </ul>
-
-      <h4>Data Storage and Security</h4>
-      <p>Inspection data is stored on your device with iOS file protection enabled. With iCloud Sync on (the default), your inspections &mdash; the inspection record, report PDFs, thumbnails, and LiDAR floor plans &mdash; also sync across the Apple devices on your iCloud account, through your <strong>private</strong> iCloud (Apple CloudKit): only to your iCloud, never to a NexGenSpec server, and NexGenSpec cannot access them. Full-resolution photos, videos, and 3D scans stay on the device that captured them. A Local-Only mode in Settings keeps inspections on a single device. Sync is not a backup &mdash; deletions propagate across your devices. Crash logs are sent to Firebase Crashlytics (Google) for diagnostics only.</p>
-
-      <h4>Third-Party Services</h4>
-      <ul>
-        <li><strong>Firebase Authentication:</strong> Account sign-in</li>
-        <li><strong>Firebase Crashlytics:</strong> Crash reporting and diagnostics</li>
-        <li><strong>Apple StoreKit:</strong> Subscription management and purchase verification</li>
-        <li><strong>Open-Meteo:</strong> Inspection-day weather lookup &mdash; receives your approximate location to return weather conditions for your report</li>
-      </ul>
-      <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
-
-      <h4>Your Rights</h4>
-      <ul>
-        <li>You can delete your account and all associated data in the app: Settings &rarr; Delete Account (permanent, cannot be undone). You can also contact contact@nexgenspec.com and we will process the request manually</li>
-        <li>You can deny or revoke location, camera, microphone, calendar, and photo library permissions at any time in iOS Settings</li>
-        <li>You can request a copy of any data we hold about you</li>
-      </ul>
-
-      <h4>Children's Privacy</h4>
-      <p>NexGenSpec is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
-      <h4>Changes to This Policy</h4>
-      <p>We may update this policy from time to time. We will notify you of material changes through the app or via email.</p>
-
-      <h4>Contact Us</h4>
-      <p>If you have questions about this privacy policy, contact us at: <a href="mailto:contact@nexgenspec.com">contact@nexgenspec.com</a></p>
-    </div>
-  </div>
-</div>
-
-<!-- TERMS OF SERVICE MODAL -->
-<div class="legal-modal-overlay" id="terms-modal">
-  <div class="legal-modal">
-    <div class="legal-modal-header">
-      <h3>Terms of Service</h3>
-      <button class="legal-modal-close" onclick="closeModal('terms-modal')">&times;</button>
-    </div>
-    <div class="legal-modal-body">
-      <div class="legal-modal-date">Effective Date: May 30, 2026</div>
-      <p>By using NexGenSpec ("the app"), you agree to these Terms of Service. If you do not agree, do not use the app. <strong>This summary covers the key terms; the complete Terms of Service &mdash; including data-retention obligations, the liability cap, and the class-action waiver &mdash; are at <a href="terms.html">/terms.html</a> and are also presented in-app during onboarding.</strong></p>
-
-      <h4>1. Use of the App</h4>
-      <p>NexGenSpec is a field inspection tool designed for professional home inspectors. You are responsible for the accuracy and completeness of all inspection data you enter. NexGenSpec is a tool to assist your workflow &mdash; it does not replace professional judgment, licensing requirements, or applicable inspection standards.</p>
-
-      <h4>2. Accounts</h4>
-      <p>You must create an account to use the app. You are responsible for maintaining the confidentiality of your login credentials. You agree to notify us immediately of any unauthorized use of your account.</p>
-
-      <h4>3. Subscriptions and Payments</h4>
-      <p>NexGenSpec offers an optional Pro subscription:</p>
-      <ul>
-        <li>Free &mdash; 3 inspections with full access to every feature (LiDAR, Apple Pencil annotation, logo'd PDF export, invoicing); free-tier reports carry a small NexGenSpec watermark; no credit card required</li>
-        <li>Pro Monthly: $49/month &mdash; Unlimited inspections and clean, unwatermarked reports</li>
-        <li>Pro Annual: $449/year &mdash; Same as Pro Monthly, billed annually (~24% savings)</li>
-      </ul>
-      <p>Subscriptions are billed through your Apple ID account. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions in your device's App Store account settings. Any unused portion of a free trial, if offered, is forfeited when you purchase a subscription.</p>
-
-      <h4>4. Free and Pro Features</h4>
-      <p>Free users can create up to 3 inspections with full access to every feature; free-tier reports carry a small NexGenSpec watermark. Pro subscribers unlock unlimited inspections and clean, unwatermarked reports.</p>
-
-      <h4>5. Intellectual Property</h4>
-      <p>The app, its design, code, branding, and content are owned by NexGenSpec. You retain ownership of all inspection data, photos, and reports you create.</p>
-
-      <h4>6. Your Data</h4>
-      <p>Inspection data is stored on your device and, with iCloud Sync on (the default), syncs across your own Apple devices through your private iCloud &mdash; never to a NexGenSpec server, and NexGenSpec cannot access it. A Local-Only mode keeps inspections on one device. Sync is not a backup: you are responsible for backing up your device. See our Privacy Policy for details on data handling.</p>
-
-      <h4>7. Disclaimer of Warranties</h4>
-      <p>The app is provided "as is" without warranties of any kind, express or implied. We do not guarantee the app will be error-free or uninterrupted. NexGenSpec is not liable for any inspection outcomes, property assessments, or professional decisions made using the app.</p>
-
-      <h4>8. Limitation of Liability</h4>
-      <p>To the maximum extent permitted by law, NexGenSpec shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the app.</p>
-
-      <h4>9. Termination</h4>
-      <p>We may suspend or terminate your access if you violate these terms. You may stop using the app at any time and cancel your subscription through App Store settings.</p>
-
-      <h4>10. Changes to These Terms</h4>
-      <p>We may update these terms from time to time. Continued use of the app after changes constitutes acceptance of the new terms.</p>
-
-      <h4>11. Governing Law</h4>
-      <p>These terms are governed by the laws of the State of Colorado, USA, and any dispute will be brought exclusively in the state or federal courts located in Denver, Colorado. <strong>Canadian users:</strong> the foregoing does not deprive you of any non-waivable consumer-protection rights granted by your province or territory of residence. Disputes are resolved on an individual basis only; class actions and consolidated proceedings are not permitted. See the <a href="terms.html">full Terms</a> for details.</p>
-
-      <h4>Contact Us</h4>
-      <p>If you have questions about these terms, contact us at: <a href="mailto:contact@nexgenspec.com">contact@nexgenspec.com</a></p>
-    </div>
-  </div>
-</div>
-
-<!-- SUPPORT MODAL -->
-<div class="legal-modal-overlay" id="support-modal">
-  <div class="legal-modal">
-    <div class="legal-modal-header">
-      <h3>Support</h3>
-      <button class="legal-modal-close" onclick="closeModal('support-modal')">&times;</button>
-    </div>
-    <div class="legal-modal-body">
-      <h4>Need Help?</h4>
-      <p>We're here to help you get the most out of NexGenSpec. If you're experiencing issues or have questions, reach out and we'll get back to you as quickly as possible.</p>
-
-      <h4>Contact Support</h4>
-      <p>Email us at: <a href="mailto:contact@nexgenspec.com">contact@nexgenspec.com</a></p>
-      <p>Please include as much detail as possible, including your device model, iOS version, and a description of the issue.</p>
-
-      <h4>Common Questions</h4>
-
-      <h4>How do I manage or cancel my subscription?</h4>
-      <p>Open your device's Settings &gt; Apple ID &gt; Subscriptions. You can change or cancel your NexGenSpec subscription there. Cancellations take effect at the end of the current billing period.</p>
-
-      <h4>How do I delete my account?</h4>
-      <p>In the app, go to Settings &gt; Delete Account. This permanently removes all your data and cannot be undone.</p>
-
-      <h4 id="faq-lidar">Which devices support LiDAR scanning?</h4>
-      <p>LiDAR scanning requires an iPhone Pro or iPad Pro with a LiDAR sensor (iPhone 12 Pro and later, iPad Pro 2020 and later). On devices without a LiDAR sensor the feature is hidden in the app — every other capability still works as expected.</p>
-
-      <h4>How do I restore my subscription on a new device?</h4>
-      <p>Sign in with the same Apple ID you used to purchase your subscription. Your Pro access will be restored automatically. If not, use the "Restore Purchases" option on the upgrade screen.</p>
-
-      <h4>Is my data backed up?</h4>
-      <p>Inspection data is stored on your device and included in your standard iCloud device backups. With iCloud Sync on (the default), your inspection records, report PDFs, and floor plans also sync across your own Apple devices through your private iCloud &mdash; but sync is <strong>not</strong> a backup: deletions propagate, and full-resolution photos and videos live only on the device that captured them. NexGenSpec never stores your data on its own servers.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Auto-open modal from URL path — MUST be after modal HTML -->
+<!-- Legacy deep links: /#privacy /#terms /#support once opened in-page modals.
+     The modals were removed (stale duplicates of the canonical legal pages);
+     redirect any old hash links to the standalone pages. -->
 <script>
 (function() {
-  var path = window.location.pathname.replace(/^\//, '').replace(/\.html$/, '').replace(/\/$/, '');
+  var map = { 'privacy': '/privacy', 'terms': '/terms', 'support': '/support' };
   var hash = window.location.hash.replace('#', '');
-  var map = { 'privacy': 'privacy-modal', 'terms': 'terms-modal', 'support': 'support-modal' };
-  var target = map[path] || map[hash];
-  if (target) {
-    var el = document.getElementById(target);
-    if (el) {
-      el.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-  }
+  if (map[hash]) window.location.replace(map[hash]);
 })();
 </script>
 </body>
