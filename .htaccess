@@ -21,8 +21,7 @@ RewriteRule ^(.*)$ https://nexgenspec.com/$1 [L,R=301]
 RewriteRule ^privacy/?$ /privacy.html [L]
 RewriteRule ^terms/?$   /terms.html   [L]
 RewriteRule ^support/?$ /support.html [L]
-# vs-spectora retired 2026-07-10 -> 301 to the category page (keeps its SEO equity)
-RewriteRule ^vs-spectora(\.html)?/?$ /vs-ai-inspection-apps [R=301,L]
+RewriteRule ^vs-spectora/?$ /vs-spectora.html [L]
 RewriteRule ^vs-ai-inspection-apps/?$ /vs-ai-inspection-apps.html [L]
 
 # --- Modern image MIME types ---
