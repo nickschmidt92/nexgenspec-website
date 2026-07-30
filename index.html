@@ -275,15 +275,18 @@ section[id] { scroll-margin-top: 80px; }
 .section-header .section-subtitle { margin: 0 auto; }
 
 /* ── FEATURES ── */
-/* 12 cards: minmax sized so we get 3 columns at iPad portrait (834px)
-   and desktop (1024px+), 2 columns on tighter widths, 1 column on phones.
-   Orphan-free at the most common breakpoints (12 = 3x4 = 2x6). */
+/* 9 cards: pinned 3 columns on desktop (9 = 3x3, orphan-free); 2 columns
+   at <=768px with the 9th card spanning full width (a deliberate wide row,
+   not a ragged orphan — 9 = 2x4 + 1); 1 column on phones. */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-@media (max-width: 768px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .features-grid .feature-card:last-child { grid-column: 1 / -1; }
+}
 @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
 
 .privacy-band {
@@ -549,7 +552,7 @@ section[id] { scroll-margin-top: 80px; }
   font-weight: 600; color: var(--gray-400); font-size: 0.9rem;
 }
 .footer-links {
-  display: flex; gap: 24px; list-style: none;
+  display: flex; flex-wrap: wrap; gap: 12px 24px; list-style: none;
   font-size: 0.85rem;
 }
 .footer-links a {
