@@ -280,9 +280,33 @@ section[id] { scroll-margin-top: 80px; }
    Orphan-free at the most common breakpoints (12 = 3x4 = 2x6). */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+@media (max-width: 768px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
+
+.privacy-band {
+  margin-top: 20px;
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.privacy-band-icon {
+  flex: 0 0 48px;
+  width: 48px; height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+}
+.privacy-band h3 { color: var(--white); font-size: 1.15rem; margin-bottom: 10px; }
+.privacy-band p { color: var(--gray-200); font-size: 0.95rem; line-height: 1.65; max-width: 900px; }
+.privacy-band p strong { color: var(--white); }
+@media (max-width: 700px) { .privacy-band { flex-direction: column; padding: 28px 24px; } }
 
 .feature-card {
   background: var(--white);
@@ -875,8 +899,8 @@ section[id] { scroll-margin-top: 80px; }
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <h3>Photo &amp; Video Capture</h3>
-        <p>Take photos and walk-through video, then mark up defects with arrows, circles, and PencilKit drawings. Evidence-grade documentation made easy.</p>
+        <h3>Photo, Video &amp; Imports</h3>
+        <p>Take photos and walk-through video, then mark up defects with arrows, circles, and PencilKit drawings. Drone shots and thermal imagery come in from your photo library &mdash; AirDrop them over and they flow into the report alongside your photos.</p>
       </div>
       <div class="feature-card reveal reveal-delay-2">
         <div class="feature-icon">
@@ -926,27 +950,15 @@ section[id] { scroll-margin-top: 80px; }
         <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
-        <h3>Calendar Integration</h3>
-        <p>Schedule inspections and they appear automatically on your iPhone or iPad calendar &mdash; with the property address, client contact info, and job ID. NexGenSpec also checks your existing events and flags scheduling conflicts. Cancel an inspection and the event clears too.</p>
+        <h3>Scheduling &amp; Site Conditions</h3>
+        <p>Schedule inspections and they land on your iPhone or iPad calendar &mdash; property address, client contact, and job ID included &mdash; with conflicts flagged and canceled events cleared automatically. Inspection-day weather is pulled from Open-Meteo and stamped onto the report &mdash; one less variable to defend later if a finding is challenged.</p>
       </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/><circle cx="6.5" cy="7.5" r="2"/></svg>
-        </div>
-        <h3>Weather Logging</h3>
-        <p>Inspection-day weather conditions are pulled automatically from Open-Meteo and stamped onto the report &mdash; one less variable to defend later if a finding is challenged.</p>
+    </div>
+    <div class="privacy-band reveal">
+      <div class="privacy-band-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
-      <div class="feature-card reveal reveal-delay-4">
-        <div class="feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </div>
-        <h3>Drone &amp; Thermal Import</h3>
-        <p>Bring drone shots and thermal imagery in from your photo library &mdash; AirDrop them over, attach them to the inspection, and they flow into the report alongside your photos.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-5">
-        <div class="feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
+      <div>
         <h3>Private by Design &mdash; Your Evidence, Your Control</h3>
         <p>Your inspections sync across your own Apple devices through your <strong>private iCloud</strong> &mdash; only to your iCloud, never to a NexGenSpec server. Full-resolution photos stay on the device that captured them, and a Local-Only mode keeps everything on one device. Works offline in basements, attics, and crawl spaces. <strong>Recommended:</strong> enable iCloud Backup and export each finalized inspection to your Files app for long-term retention &mdash; the inspector is responsible for keeping their own records.</p>
       </div>
