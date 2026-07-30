@@ -405,13 +405,12 @@ section[id] { scroll-margin-top: 80px; }
 /* ── PRICING ── */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 28px;
   align-items: start;
-  max-width: 780px;
+  max-width: 420px;
   margin: 0 auto;
 }
-@media (max-width: 700px) { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
 
 .pricing-card {
   background: var(--white);
@@ -485,45 +484,6 @@ section[id] { scroll-margin-top: 80px; }
 .pricing-desc {
   font-size: 0.875rem; color: var(--gray-500);
   padding-top: 16px; border-top: 1px solid var(--gray-100);
-}
-.pricing-card.coming-soon {
-  border-style: dashed;
-  border-color: var(--gray-300);
-  background: var(--gray-50);
-}
-.pricing-card.coming-soon:hover {
-  border-color: var(--blue);
-}
-.coming-soon-badge {
-  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-  padding: 4px 16px; border-radius: 100px;
-  background: var(--navy);
-  color: var(--white); font-size: 0.7rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.06em;
-  white-space: nowrap;
-}
-.coming-soon-label {
-  font-size: 1.5rem; font-weight: 800; color: var(--navy);
-  letter-spacing: -0.02em; margin-bottom: 4px;
-}
-.coming-soon-sub {
-  font-size: 0.85rem; color: var(--gray-400); margin-bottom: 16px;
-}
-.interest-btn {
-  display: inline-block;
-  padding: 10px 24px;
-  border-radius: 10px;
-  background: var(--navy);
-  color: var(--white);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background var(--transition), transform var(--transition);
-  margin-top: 8px;
-}
-.interest-btn:hover {
-  background: var(--blue);
-  transform: translateY(-2px);
 }
 .pricing-note {
   text-align: center; margin-top: 32px;
@@ -1067,22 +1027,6 @@ section[id] { scroll-margin-top: 80px; }
           <li>Unlimited inspections</li>
           <li>Clean, unwatermarked reports</li>
         </ul>
-      </div>
-
-      <!-- TEAMS — COMING SOON -->
-      <div class="pricing-card coming-soon reveal reveal-delay-1">
-        <div class="coming-soon-badge">Coming Soon</div>
-        <h3>Teams</h3>
-        <div class="coming-soon-label">Built for firms</div>
-        <div class="coming-soon-sub">Everything in Pro, plus:</div>
-        <ul class="pricing-features">
-          <li>Team collaboration</li>
-          <li>Multi-user workspaces</li>
-          <li>Shared inspection templates</li>
-          <li>Admin dashboard</li>
-          <li>Priority support</li>
-        </ul>
-        <a href="mailto:contact@nexgenspec.com?subject=Teams%20Interest&body=I'm%20interested%20in%20NexGenSpec%20Teams.%20My%20company%20has%20____%20inspectors." class="interest-btn">Notify Me</a>
       </div>
 
     </div>
